@@ -9,23 +9,23 @@ Using the sample http log file, perform the following tasks:
 
 # Requirments:
 Steps to create Virtual environment
-- pip install virtualenv
-- virtualenv mypython
-- source mypython/bin/activate
+- python3 -m venv logparser
+- source logparser/bin/activate
 
 Install packages
-- pip install unittest
-- sudo pip install mock
+- pip install -r requirements.txt
 
 # How to use
 Tool is to read the data.txt log file, and process/construct the report based on input parameter options
-1. Download source code from git report
-2. set PYTHONPATH to directory you downloaded (e.g : export PATHONPATH=~/.projlogparser)
-3. Execute the script
-  - python src/logparse.py 
+1. Download source code from git report 
+2. (Pre-req) : Require requirements steps before executing steps
+3. set PYTHONPATH to directory you downloaded (e.g : export PATHONPATH=~/.projlogparser)
+4. Execute the script
+   Source can run in same $HOME/projlogparser directory
+  - $python src/logparse.py 
   - Usage: logparse [--topn] [--perc_success] [--perc_fail] [--topnfail] [--topnhost]
 
-4. Out put will shows on output console
+5. Output of tool will shows on output console
    eg:-
     $> python src/logparse.py --topn 4 
     INFO:root:Page : /index.php?option=com_contact&view=contact&id=1, number of request for each : 10819
@@ -78,3 +78,5 @@ Tool is to read the data.txt log file, and process/construct the report based on
   % python -m unittest tests/test_parse.py
 
    Added unit test cases for all the possible cases and validate with different paremeters
+   
+Note : Script can execute either both python/python3.8
