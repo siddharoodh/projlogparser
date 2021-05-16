@@ -1,4 +1,4 @@
-# Project on Sample Http Response Data log parser
+# Sample Http response data log parser
 Using the sample http log file, perform the following tasks:
 1. Top 10 requested pages and the number of requests made for each
 2. Percentage of successful requests (anything in the 200s and 300s range)
